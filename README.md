@@ -22,4 +22,8 @@ val_dir = './validation'
 use_pretrain = True
 ```
 
+- Training
 
+```
+python3 train.py
+```
