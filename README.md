@@ -5,7 +5,7 @@
 pip install efficientnet_pytorch
 ```
 
-- Download [pretrained models](https://drive.google.com/file/d/136xL5zmsa-OCGGeNKTjMMGqJq5UhFFUe/view?usp=sharing) and unzip them in pretrained_models directory
+- Download [pretrained models](https://drive.google.com/file/d/136xL5zmsa-OCGGeNKTjMMGqJq5UhFFUe/view?usp=sharing) and unzip them
 
 
 
