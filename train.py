@@ -11,17 +11,19 @@ from dataset import *
 from models import *
 
 if __name__ == "__main__":
+    # initialize the deive and random seed
     configs.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     seed_torch(configs.random_seed)
 
+    # data transform
+    data_transforms = get_transform()
+
     if(configs.use_pretrain):
         print('#' * 10, 'Use pretrained models', '#' * 10)
-        mean_model = torch.load('./pretrained_models/mean_model.pth')
-        std_model = torch.load('./pretrained_models/std_model.pth')
+        mean_model = torch.load('./pretrained_models/mean_model.pth', map_location=configs.device)
+        std_model = torch.load('./pretrained_models/std_model.pth', map_location=configs.device)
     else:
-        # data transform
-        data_transforms = get_transform()
-
+        
         ################ Train Mean Target #################
         print('#' * 10, 'Mean training', '#' * 10)
 
